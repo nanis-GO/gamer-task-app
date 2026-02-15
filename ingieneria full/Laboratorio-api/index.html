@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PokeAPI Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .info {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #ffcc00;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ffdb4d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Pokémon</h1>
+    <img id="imagen" src="imagen.jpg" alt="pokemon">
+    <div class="info" id="datos"></div>
+    <button onclick="cargarPokemon()">Cargar Pokémon</button>
+</div>
+
+<script>
+function cargarPokemon() {
+    fetch("https://pokeapi.co/api/v2/pokemon/Sylveon")
+    .then(response => response.json())
+    .then(data => {
+
+        console.log("Nombre:", data.name);
+        console.log("Peso:", data.weight);
+        console.log("Habilidades:", data.abilities.map(a => a.ability.name));
+
+        // imagen
+        document.getElementById("imagen").src = data.sprites.front_default;
+
+        document.getElementById("datos").innerHTML = `
+            <p><span class="label">Nombre:</span> ${data.name}</p>
+            <p><span class="label">Peso:</span> ${data.weight}</p>
+            <p><span class="label">Habilidades:</span> ${data.abilities.map(a => a.ability.name).join(", ")}</p>
+        `;
+    })
+    .catch(error => console.error("Error:", error));
+}
+</script>
+
+</body>
+</html>
