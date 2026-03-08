@@ -1,0 +1,14 @@
+export default `<!doctype html>
+<html lang="en" data-beasties-container="">
+<head>
+  <meta charset="utf-8">
+  <title>WebTask</title>
+  <base href="/gamer-task-app/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>:root{--bg-dark:#0b0914;--bg-card:#161320;--primary-cyan:#29b6d1;--accent-purple:#7b2cbf;--text-main:#ffffff;--text-muted:#888;--input-bg:#211d2b}body{background-color:var(--bg-dark);color:var(--text-main);font-family:Segoe UI,sans-serif;margin:0}</style><link rel="stylesheet" href="styles-SPWQBDZJ.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-SPWQBDZJ.css"></noscript></head>
+<body ngcm="">
+  <app-root></app-root>
+<script src="main-NQWXZKHA.js" type="module"></script></body>
+</html>
+`;
