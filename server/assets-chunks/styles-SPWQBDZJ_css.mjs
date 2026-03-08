@@ -1,0 +1,2 @@
+export default `:root{--bg-dark: #0b0914;--bg-card: #161320;--primary-cyan: #29b6d1;--accent-purple: #7b2cbf;--text-main: #ffffff;--text-muted: #888;--input-bg: #211d2b}body{background-color:var(--bg-dark);color:var(--text-main);font-family:Segoe UI,sans-serif;margin:0}
+`;

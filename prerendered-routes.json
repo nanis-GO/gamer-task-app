@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/gamer-task-app": {},
+    "/gamer-task-app/login": {},
+    "/gamer-task-app/profile": {},
+    "/gamer-task-app/register": {},
+    "/gamer-task-app/tasks": {}
+  }
+}
