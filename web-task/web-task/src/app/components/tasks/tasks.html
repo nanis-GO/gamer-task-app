@@ -1,0 +1,20 @@
+<div class="main-container">
+  <div class="quest-log">
+    <h2>DAILY MISSIONS</h2>
+    
+    <div class="add-quest">
+      <input [(ngModel)]="nuevaTarea" (keyup.enter)="add()" placeholder="Escribe una nueva misión...">
+      <button (click)="add()">AÑADIR</button>
+    </div>
+
+    <ul class="task-list">
+      <li *ngFor="let t of tareas"
+          [ngClass]="{ 'done': t.done, 'pending': !t.done }" 
+          (click)="toggle(t)">
+        <span class="check-icon">{{ t.done ? '✔' : '○' }}</span>
+        {{ t.texto }}
+      </li>
+    </ul>
+
+  </div>
+</div>

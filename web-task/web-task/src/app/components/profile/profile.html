@@ -1,0 +1,30 @@
+<div class="main-container">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="avatar-circle">
+        <img src="https://i.pinimg.com/736x/c0/33/47/c03347c8f63d57a0ef3a10264a0864fa.jpg" alt="Avatar">
+      </div>
+      <h2>CHARACTER PROFILE</h2>
+      <p class="status-online">● ONLINE</p>
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="save()">
+      <div class="input-group">
+        <label>NICKNAME</label>
+        <input type="text" formControlName="nickname">
+      </div>
+
+      <div class="input-group">
+        <label>EMAIL</label>
+        <input type="email" formControlName="email">
+      </div>
+
+      <div class="input-group">
+        <label>BIO / STATUS</label>
+        <textarea formControlName="bio" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn-update">UPDATE STATS</button>
+    </form>
+  </div>
+</div>

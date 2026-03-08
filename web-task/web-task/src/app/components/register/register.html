@@ -1,0 +1,50 @@
+<div class="main-container">
+  <div class="card-gamer">
+    
+    <div class="image-section">
+      <div class="overlay-text">
+        <h1>JOIN THE CLAN</h1>
+        <p>Start your journey today</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="tabs">
+        <span class="tab-active">REGISTRATION</span> / <span class="tab-inactive">LOGIN</span>
+      </div>
+
+      <form [formGroup]="regForm" (ngSubmit)="doRegister()">
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" formControlName="user" placeholder="Gamer ID">
+          <span class="error-msg" *ngIf="regForm.get('user')?.invalid && regForm.get('user')?.touched">
+            * El usuario es obligatorio.
+          </span>
+        </div>
+
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="email@example.com">
+          <span class="error-msg" *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">
+            * Introduce un correo válido.
+          </span>
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" formControlName="pass" placeholder="••••••••">
+          <span class="error-msg" *ngIf="regForm.get('pass')?.invalid && regForm.get('pass')?.touched">
+            * Mínimo 8 caracteres requeridos.
+          </span>
+        </div>
+
+        <button type="submit" class="btn-submit" [disabled]="regForm.invalid">
+          CREATE ACCOUNT
+        </button>
+
+        <p class="footer-msg">Already have an account? <a routerLink="/login">Login</a></p>
+      </form>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,101 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0b0914; /* Fondo oscuro exterior */
+}
+
+.card-login {
+  display: flex;
+  width: 850px;
+  height: 550px;
+  background-color: #161320; /* Fondo de la tarjeta */
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* Lado de la Imagen */
+.image-section {
+  flex: 1;
+  background: url('https://i.pinimg.com/1200x/cf/ce/0d/cfce0d8563c39ce29ee9cb5f787cb22a.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: white;
+}
+
+/* Lado del Formulario */
+.form-section {
+  flex: 1.2;
+  padding: 40px;
+  position: relative;
+}
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #555;
+  cursor: pointer;
+}
+
+.tabs {
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.tab-active { color: #29b6d1; border-bottom: 2px solid #29b6d1; padding-bottom: 4px; }
+
+.input-group { margin-bottom: 20px; }
+
+label { display: block; color: #888; font-size: 12px; margin-bottom: 8px; }
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  background: #211d2b;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #29b6d1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-submit:disabled { opacity: 0.4; }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.s-icon {
+  width: 35px; height: 35px; border-radius: 50%; background: none; border: 1px solid #333; color: white; cursor: pointer;
+}
+/* ++ AÑADIDO: Estilo para las advertencias de error ++ */
+.error-msg {
+  color: #ff4a4a;
+  font-size: 11px;
+  margin-top: 5px;
+  display: block;
+  font-weight: bold;
+}

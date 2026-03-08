@@ -1,0 +1,128 @@
+
+/* --- TUS CONTENEDORES (Mantenidos) --- */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+  background-color: #0b0914; /* Aseguramos el fondo oscuro */
+}
+
+.card-gamer {
+  display: flex;
+  width: 850px;
+  height: 550px;
+  background-color: #161320;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.image-section {
+  flex: 1;
+  background: url('https://i.pinimg.com/1200x/38/56/a8/3856a895140bb69f0c4904d35d1aea1a.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.form-section {
+  flex: 1.2;
+  padding: 40px;
+  background-color: #161320;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- RELLENO DE ESTILOS PARA QUE SE VEA COMO EL LOGIN --- */
+
+.overlay-text {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.overlay-text h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+
+.tabs {
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.tab-active { 
+  color: #29b6d1; 
+  border-bottom: 2px solid #29b6d1; 
+  padding-bottom: 4px; 
+}
+
+.tab-inactive { color: #888; cursor: pointer; }
+
+.input-group { margin-bottom: 20px; }
+
+label { 
+  display: block; 
+  color: #888; 
+  font-size: 12px; 
+  margin-bottom: 8px; 
+  text-transform: uppercase;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  background: #211d2b;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus { border-color: #29b6d1; }
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: #29b6d1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.btn-submit:hover { background: #2299b0; }
+
+.btn-submit:disabled { 
+  background: #211d2b; 
+  color: #444; 
+  cursor: not-allowed; 
+}
+
+.footer-msg {
+  text-align: center;
+  margin-top: auto;
+  font-size: 12px;
+  color: #888;
+}
+
+.footer-msg a {
+  color: #29b6d1;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* ++ AÑADIDO: Estilo de error igual que en el login ++ */
+.error-msg {
+  color: #ff4a4a;
+  font-size: 11px;
+  margin-top: 5px;
+  display: block;
+  font-weight: bold;
+}

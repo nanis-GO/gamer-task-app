@@ -1,0 +1,73 @@
+/* 1. Contenedor que centra TODO en la pantalla */
+.main-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  min-height: 80vh;        /* Altura para que flote al centro */
+  background-color: #0b0914;
+}
+
+/* 2. La tarjeta de perfil (centrada y con ancho fijo) */
+.profile-card {
+  width: 450px;            /* Ancho controlado como en el login */
+  background-color: #161320;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* Centra los elementos de adentro */
+}
+
+/* 3. El avatar con tamaño controlado (ya no se ve enorme) */
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #29b6d1;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+
+/* 4. Inputs y Labels alineados a la izquierda dentro de la tarjeta */
+.input-group {
+  width: 100%;             /* Que usen todo el ancho de la tarjeta */
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  color: #29b6d1;
+  font-size: 11px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #211d2b;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box; /* Evita que se salgan de la tarjeta */
+}
+
+/* 5. Botón tipo Gamer */
+.btn-update {
+  width: 100%;
+  padding: 14px;
+  background-color: transparent;
+  border: 2px solid #29b6d1;
+  color: #29b6d1;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-update:hover {
+  background-color: #29b6d1;
+  color: white;
+}

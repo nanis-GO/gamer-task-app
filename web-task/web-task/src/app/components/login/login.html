@@ -1,0 +1,65 @@
+<div class="main-container">
+  <div class="card-login">
+    
+    <div class="image-section">
+      <div class="overlay-text">
+        <h1>HI THERE!</h1>
+        <p>join us and enjoy</p>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="close-icon">×</div>
+      
+      <div class="tabs">
+        <span class="tab-inactive">REGISTRATION</span> / <span class="tab-active">LOGIN</span>
+      </div>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="Enter your Email">
+          <span class="error-msg" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+            * Correo obligatorio y debe ser válido.
+          </span>
+        </div>
+
+        <div class="input-group">
+          <div class="label-row">
+            <label>Password</label>
+            <div class="strength-bar"><span></span><span></span><span></span></div>
+          </div>
+          <div class="pass-wrapper">
+            <input type="password" formControlName="password" placeholder="••••••••">
+            <span class="eye-icon">👁</span>
+          </div>
+          <span class="error-msg" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            * Mínimo 6 caracteres obligatorios.
+          </span>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="terms" checked>
+          <label for="terms">
+            I am 18 years old and I have read and accept 
+            <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit" [disabled]="loginForm.invalid">
+          LOGIN
+        </button>
+
+        <p class="social-label">or via social network</p>
+        <div class="social-icons">
+          <button type="button" class="s-icon">G+</button>
+          <button type="button" class="s-icon">f</button>
+          <button type="button" class="s-icon">𝕏</button>
+        </div>
+
+        <p class="footer-msg">Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
+
+  </div>
+</div>
